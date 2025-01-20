@@ -1,0 +1,14 @@
+<h2>Events</h2>
+<ul>
+  <li *ngFor="let event of events">
+    <a [routerLink]="['/event', event.id]">{{ event.name }}</a>
+  </li>
+</ul>
+
+<h1>Event Management</h1>
+<form (ngSubmit)="createEvent()">
+  <input [(ngModel)]="newEvent.name" name="name" placeholder="Event Name" required />
+  <input [(ngModel)]="newEvent.startTime" name="startTime" type="datetime-local" required />
+  <input [(ngModel)]="newEvent.endTime" name="endTime" type="datetime-local" required />
+  <button type="submit">Create Event</button>
+</form>

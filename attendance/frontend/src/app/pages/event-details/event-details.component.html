@@ -1,0 +1,7 @@
+<h1>Event: {{ eventName }}</h1>
+<h2>Attendees</h2>
+<ul>
+  <li *ngFor="let attendee of attendees">
+    {{ attendee.name }} ({{ attendee.email }})
+  </li>
+</ul>
